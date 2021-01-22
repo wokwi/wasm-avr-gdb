@@ -1,0 +1,11 @@
+--- readline/readline/config.h.in	2020-09-13 02:33:41.000000000 +0000
++++ readline/readline/config.h.in	2021-01-21 21:52:55.270000000 +0000
+@@ -281,7 +281,7 @@
+ 
+ #undef HAVE_BSD_SIGNALS
+ 
+-#undef HAVE_POSIX_SIGNALS
++#define HAVE_POSIX_SIGNALS
+ 
+ #undef HAVE_USG_SIGHOLD
+ 

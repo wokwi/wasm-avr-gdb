@@ -1,0 +1,14 @@
+--- sim/common/Make-common.in
++++ sim/common/Make-common.in
+@@ -283,9 +283,9 @@ gentmap: Makefile $(srccom)/gentmap.c $(srccom)/nltvals.def
+ targ-vals.h targ-map.c: stamp-tvals
+ stamp-tvals: gentmap
+ 	rm -f tmp-tvals.h tmp-tmap.c
+-	./gentmap -h >tmp-tvals.h
++	node ./gentmap -h >tmp-tvals.h
+ 	$(SHELL) $(srcroot)/move-if-change tmp-tvals.h targ-vals.h
+-	./gentmap -c >tmp-tmap.c
++	node ./gentmap -c >tmp-tmap.c
+ 	$(SHELL) $(srcroot)/move-if-change tmp-tmap.c targ-map.c
+ 	touch stamp-tvals
+ 

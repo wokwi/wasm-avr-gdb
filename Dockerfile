@@ -32,8 +32,8 @@ RUN tar xf gdb-10.1.tar.xz
 
 ### Apply patches
 WORKDIR /build/gdb-10.1
-COPY patches/gdb-wasm.patch /build/gdb-10.1/gdb-wasm.patch
-RUN patch -i gdb-wasm.patch -p0
+COPY patches/ /build/gdb-10.1/patches
+RUN for PATCH in patches/*; do echo "Applying patch $PATCH..."; patch -i $PATCH -p0; done
 
 ### Build GDB
 RUN bash -c 'source /opt/emsdk/emsdk_env.sh && emconfigure  ./configure --target=avr --with-static-standard-libraries'

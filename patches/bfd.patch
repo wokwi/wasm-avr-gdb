@@ -1,0 +1,11 @@
+--- bfd/Makefile.in.orig	2021-01-21 21:16:29.473000000 +0000
++++ bfd/Makefile.in	2021-01-21 21:17:15.470000000 +0000
+@@ -461,7 +461,7 @@
+ ACLOCAL_AMFLAGS = -I . -I .. -I ../config
+ INCDIR = $(srcdir)/../include
+ CSEARCH = -I. -I$(srcdir) -I$(INCDIR)
+-SUBDIRS = doc po
++SUBDIRS = po
+ bfddocdir = doc
+ libbfd_la_LDFLAGS = $(am__append_1) -release `cat libtool-soversion` \
+ 	@SHARED_LDFLAGS@ $(am__empty)

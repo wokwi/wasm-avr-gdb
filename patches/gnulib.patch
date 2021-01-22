@@ -1,0 +1,23 @@
+--- gnulib/import/getcwd.c
++++ gnulib/import/getcwd.c
+@@ -473,6 +473,8 @@ __getcwd (char *buf, size_t size)
+   return NULL;
+ }
+ 
++/*
+ #ifdef weak_alias
+ weak_alias (__getcwd, getcwd)
+ #endif
++*/
+\ No newline at end of file
+--- gnulib/import/getrandom.c
++++ gnulib/import/getrandom.c
+@@ -18,7 +18,7 @@
+ /* Written by Paul Eggert.  */
+ 
+ #include <config.h>
+-
++#include <stddef.h>
+ #include <sys/random.h>
+ 
+ #include <errno.h>

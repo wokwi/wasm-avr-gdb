@@ -1,0 +1,20 @@
+--- ./libiberty/strsignal.c.orig	2021-01-21 20:42:22.879695310 +0000
++++ ./libiberty/strsignal.c	2021-01-21 20:45:50.325507224 +0000
+@@ -549,7 +549,7 @@
+ */
+ 
+ #ifndef HAVE_PSIGNAL
+-
++/*
+ void
+ psignal (int signo, char *message)
+ {
+@@ -566,7 +566,7 @@
+       fprintf (stderr, "%s: %s\n", message, sys_siglist[signo]);
+     }
+ }
+-
++*/
+ #endif	/* ! HAVE_PSIGNAL */
+ 
+ 
