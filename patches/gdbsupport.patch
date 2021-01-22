@@ -1,0 +1,11 @@
+--- gdbsupport/Makefile.in
++++ gdbsupport/Makefile.in
+@@ -177,7 +177,7 @@ depcomp = $(SHELL) $(top_srcdir)/../depcomp
+ am__depfiles_maybe = depfiles
+ am__mv = mv -f
+ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
++	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -s USE_PTHREADS=1
+ AM_V_CXX = $(am__v_CXX_@AM_V@)
+ am__v_CXX_ = $(am__v_CXX_@AM_DEFAULT_V@)
+ am__v_CXX_0 = @echo "  CXX     " $@;
