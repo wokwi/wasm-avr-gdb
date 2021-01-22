@@ -40,3 +40,4 @@ RUN bash -c 'source /opt/emsdk/emsdk_env.sh && emconfigure  ./configure --target
 RUN bash -c 'source /opt/emsdk/emsdk_env.sh && emmake make'
 
 ### Have fun!
+CMD [ "bash", "-c", "source /opt/emsdk/emsdk_env.sh && node --experimental-wasm-threads gdb/gdb" ]
